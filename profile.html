@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Profile</title>
+	<link rel="stylesheet" href="styles.css"/>
+	<script src="script.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="navBarContainer">
+	<div id="nav-placeholder"></div>
+</header>
+<script>
+	$.get("nav.html", function(data){
+		$("#nav-placeholder").replaceWith(data);
+	});
+</script>
+<main>
+	<h1>My Profile</h1>
+
+	<form action="post">
+		<input type="text" name="fName" placeholder="First Name">
+		<input type="text" name="lName" placeholder="Last Name">
+		<button type="submit" class="filledButton">Save Info</button>
+	</form>
+
+	<h1>Edit Password</h1>
+	<form action="post">
+		<input type="password" name="oldPassword" placeholder="Old Password">
+		<input type="password" name="newPassword" placeholder="New Password">
+		<input type="password" name="confPassword" placeholder="Confirm New Password">
+		<button type="submit" class="filledButton">Change Password</button>
+	</form>
+	<br>
+	<button class="filledButton">Logout</button>
+</main>
+</body>
+</html>

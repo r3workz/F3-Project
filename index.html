@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>MeShop</title>
+	<meta name="description" content=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="styles.css"/>
+	<script src="script.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="navBarContainer">
+	<div id="nav-placeholder"></div>
+</header>
+<script>
+	$.get("nav.html", function(data){
+		$("#nav-placeholder").replaceWith(data);
+	});
+</script>
+<main>
+	<h1>MeShop.</h1>
+	<div>Your First Shop built on HTML, CSS AND JavaScript</div>
+	<div>
+		<button id="loginBtn" class="filledButton" onclick="location.href = 'login.html';">Login</button>
+		<button id="submitBtn" class="outlinedBtn" onclick="location.href = 'signup.html';">Signup</button>
+	</div>
+	<div class="indexImage"><img src="assets/landingPagePic.png" alt="image"></div>
+</main>
+</body>
+</html>
